@@ -56,17 +56,11 @@ module Devise
   end
 end
 
-CouchRest::Model::Base.send(:extend, Devise::Models)
-CouchRest::Model::Base.send(:include, Devise::Models)
-
-#CouchRest::Model::Base.append_extensions(Devise::Models)
-#CouchRest::Model::Base.append_extensions(Devise::Orm::CouchrestModel::Hook)
-
-#module CouchRest
-#  module Model
-#   module Base
-#    extend ::Devise::Models
-#    extend ::Devise::Orm::CouchrestModel::Hook
-#    end
-#  end
-#end
+module CouchRest
+  module Model
+    class Base
+      extend ::Devise::Models
+      extend ::Devise::Orm::CouchrestModel::Hook
+    end
+  end
+end
