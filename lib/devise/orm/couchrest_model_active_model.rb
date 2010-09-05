@@ -1,6 +1,7 @@
 require 'devise/orm/couchrest_model/compatibility'
 require 'devise/orm/couchrest_model/schema'
 require 'devise/orm/couchrest_model/date_time'
+require 'couchrest/model/validations/uniqueness'
 
 module Devise
   module Orm
@@ -23,23 +24,6 @@ module Devise
           devise_modules.each { |m| send(m) if respond_to?(m, true) }
         end
       end
-
-      # http://github.com/jkaramon/CouchrestModel/blob/rails3/lib/couchrest_model/plugins/validations.rb
-      # ==============================================================
-      #   validates_each in couchrest_model should work just fine!
-      # ==============================================================
-
-      # class UniquenessValidator < ActiveModel::EachValidator
-      #   def validate_each(target, attribute, value)
-      #     resource = ::DataMapper.repository(target.repository.name) { target.model.first(attribute => value) }
-      #     if resource.nil? || (target.saved? && resource.key == target.key)
-      #       return true
-      #     else
-      #       target.errors.add(attribute, :taken)
-      #       return false
-      #     end
-      #   end
-      # end
 
       module ActiveModelCompatibility
         # include ActiveModel::Validations does not make save check valid?.

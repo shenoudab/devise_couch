@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-#gem 'rails', '3.0.0.rc'
-gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails', '3.0.0'
+#gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'warden'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'

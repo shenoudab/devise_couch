@@ -1,4 +1,6 @@
+require 'devise_couch'
 require "couchrest/model/base"
+require 'devise/orm/couchrest_model/compatibility'
 
 module Devise
   module Orm
@@ -6,7 +8,7 @@ module Devise
       module Hook
         def devise_modules_hook!
           extend Schema
-          #Include Compatibility
+          include Compatibility
           yield
           return unless Devise.apply_schema
           devise_modules.each { |m| send(m) if respond_to?(m, true) }
