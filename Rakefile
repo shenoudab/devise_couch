@@ -49,6 +49,7 @@ spec = Gem::Specification.new do |s|
   s.email = "sbertel@mobithought.com"
   s.homepage = "http://github.com/shenoudab/devise_couch"
   s.author = 'Shenouda Bertel'
+  s.require_path = 'lib'
 end
 
 Rake::GemPackageTask.new(spec) do |pkg|
