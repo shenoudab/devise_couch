@@ -3,23 +3,7 @@ module Devise
     module CouchrestModel
       module Compatibility
         extend ActiveSupport::Concern
-
-        extend ActiveSupport::Concern
         extend ActiveModel::Naming
-
-        include ActiveModel::Serializers::Xml
-        include ActiveModel::Serializers::JSON
-
-        def to_xml(options = {}, &block)
-          options[:except] ||= []
-          options[:except] << :_id
-
-          super options do |b|
-            b.id self.id
-            block.call(b) if block_given?
-          end
-        end
-
 
         module ClassMethods
           # Hooks for confirmable
@@ -48,40 +32,6 @@ module Devise
               METHOD
             end
           end
-
-          # Add ActiveRecord like finder
-          def find(*args)
-            case args.first
-            when :first, :all
-              send(args.shift, *args)
-            else          
-              where(:'_id' => args.first).first
-            end
-          end
-        end
-
-        # def changed?
-        #   dirty?
-        # end
-
-        def save(options=nil)
-          if options.is_a?(Hash) && options[:validate] == false
-            save!
-          else
-            super()
-          end
-        end
-
-        def update_attribute(name, value)
-          update_attributes(name => value)
-        end
-        # 
-        # def update_attributes(*args)
-        #   update(*args)
-        # end
-
-        def invalid?
-          !valid?
         end
       end
     end

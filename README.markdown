@@ -2,25 +2,6 @@
 
 *devise_couch* will let you use [devise](http://github.com/plataformatec/devise) with [CocuhrestModel](http://github.com/couchrest/couchrest_model). 
 
-*devise_couch* is intended for use with *Rails 3* and *Devise 1.1.1*. It may work with earlier versions of devise, but it's not been tested.
-
-This README only covers *devise_couch* specifics. Make sure to read the [devise README](http://github.com/plataformatec/devise/blob/master/README.rdoc)
-
-## Usage options
-
-The gem gives you the options of 2 ORM setups depending on what library you wish to use for validations:   
-
-* *couchrest_model* - Uses CocuhrestModel validations 
-* *couchrest_model_active_model* - Uses ActiveModel::Validations
-
-The advantage to this is ActiveModel's I18n support for error messages, and it uses the same validations lib as devise does by default.
-
-## ActiveModel compatibility 
-
-Currently only the <code>couchrest_model</code> option has been tested. 
-There should be full ActiveModel support in a future version of CocuhrestModel, after Rails 3 is released.
-ActiveModel support will likely be part of *CocuhrestModel 1.0* (as mentioned by jnunemaker in a post).
-
 ## Installation
 
 Add *devise*, *devise_couch* and *couchrest_model* gems to your Gemfile (your Rails app Gemfile). The following gems are required
@@ -33,10 +14,8 @@ Add *devise*, *devise_couch* and *couchrest_model* gems to your Gemfile (your Ra
   gem 'devise_couch'
   gem 'rails3-generators', :git => 'git://github.com/shenoudab/rails3-generators.git'
 </pre>
-
-<pre>gem install rails3-generators</pre>
   
-Alternatively use bundler to install all required gems in your Rails 3 app 
+Use bundler to install all required gems in your Rails 3 app 
 
 <pre>bundle install</pre>
 
@@ -46,7 +25,7 @@ Run the generator:
 
 The generator will install an initializer which describes ALL Devise's
 configuration options and you MUST take a look at it. Make sure to specify
-either <code>mongo_mapper</code> or <code>mongo_mapper_active_model</code> (ActiveModel::Validations) 
+either <code>couchrest_model</code> (ActiveModel::Validations) 
 as the orm in the configuration file.
 
 To add Devise to any of your models using the generator:
