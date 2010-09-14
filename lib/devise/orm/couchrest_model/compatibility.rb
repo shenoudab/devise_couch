@@ -6,32 +6,18 @@ module Devise
         extend ActiveModel::Naming
 
         module ClassMethods
-          # Hooks for confirmable
-          def before_create(*args)
-            wrap_hook(:before, :create, *args)
+          # Add ActiveRecord like finder
+          def find(*args)
+            p *args
+            # TODO This needs to be altered to support, for example:
+            #
+            #     find(:first, :conditions => {:email => 'example@example.com'})
+            #     find(:first, :conditions => {:confirmation_token=>"kBFXeMHS1FX79NL5UKBe"})
+            super
           end
-
-          def after_create(*args)
-            wrap_hook(:after, :create, *args)
-          end
-
-          def before_save(*args)
-            wrap_hook(:before, :save, *args)
-          end
-
-          def wrap_hook(action, method, *args)
-            options = args.extract_options!
-
-            args.each do |callback|
-              callback_method = :"#{callback}_callback_wrap"
-              send action, method, callback_method
-              class_eval <<-METHOD, __FILE__, __LINE__ + 1
-                def #{callback_method}
-                  #{callback} if #{options[:if] || true}
-                end
-              METHOD
-            end
-          end
+        end
+        
+        def reload
         end
       end
     end

@@ -1,6 +1,7 @@
 require 'shared_admin'
 
-class Admin < CouchrestModel::Model::Base
+class Admin < CouchRest::Model::Base
+  use_database CouchRest.new.database('devise_couch')
 
   property :username, :type => String
 
