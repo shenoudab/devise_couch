@@ -10,8 +10,8 @@ require "orm/#{DEVISE_ORM}"
 
 require "couchrest"
 
-@@SERVER = CouchRest.new
-@@SERVER.default_database = 'devise_couch'
+TEST_SERVER = CouchRest.new
+TEST_SERVER.default_database = 'devise_couch'
 
 I18n.load_path << "#{DEVISE_PATH}/test/support/locale/en.yml"
 

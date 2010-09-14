@@ -20,7 +20,7 @@ end
 desc 'Run Devise tests using CouchDB. Specify path to devise with DEVISE_PATH'
 Rake::TestTask.new(:test) do |test|
   ENV['DEVISE_ORM'] ||= 'couchrest_model'
-  ENV['DEVISE_PATH'] ||= File.expand_path('./')
+  ENV['DEVISE_PATH'] ||= File.expand_path('../devise')
   unless File.exist?(ENV['DEVISE_PATH'])
     puts "Specify the path to devise (e.g. rake DEVISE_PATH=/path/to/devise). Not found at #{ENV['DEVISE_PATH']}"
     exit
