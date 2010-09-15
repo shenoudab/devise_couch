@@ -6,14 +6,10 @@ module Devise
         extend ActiveModel::Naming
 
         module ClassMethods
-          # Add ActiveRecord like finder
           def find(*args)
-            p *args
-            # TODO This needs to be altered to support, for example:
-            #
-            #     find(:first, :conditions => {:email => 'example@example.com'})
-            #     find(:first, :conditions => {:confirmation_token=>"kBFXeMHS1FX79NL5UKBe"})
-            super
+            options = args.extract_options!
+            conditions = options[:conditions]
+            by_login(:key => conditions[authentication_keys.first]).first
           end
         end
         
