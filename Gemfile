@@ -1,19 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0'
-#gem 'rails', :git => 'git://github.com/rails/rails.git'
+gem 'rails'
+gem 'rack', :git => 'git://github.com/chneukirchen/rack.git'
 
-gem 'warden'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 
-gem 'couchrest'
-gem 'couchrest_extended_document'
-gem 'couchrest_model'
+gem 'couchrest', :git => 'git://github.com/couchrest/couchrest.git'
+gem 'couchrest_model', :git => 'git://github.com/shenoudab/couchrest_model.git'
 
 gem 'oauth2'
 
 gem 'rails3-generators', :git => 'git://github.com/shenoudab/rails3-generators.git'
 
-gem 'webrat', '0.7.0'
+gem 'webrat'
 gem 'mocha', :require => false
 gem 'bcrypt-ruby', :require => 'bcrypt'

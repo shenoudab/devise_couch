@@ -29,7 +29,7 @@ Rake::TestTask.new(:test) do |test|
   test.libs << "#{ENV['DEVISE_PATH']}/lib"
   test.libs << "#{ENV['DEVISE_PATH']}/test"
   test.test_files = FileList["#{ENV['DEVISE_PATH']}/test/**/*_test.rb"] + FileList['test/**/*_test.rb']
-  test.verbose = true
+  test.verbose = false
 end
 
 Rake::RDocTask.new(:rdoc) do |rdoc|

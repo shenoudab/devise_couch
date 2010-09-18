@@ -1,86 +1,86 @@
 GIT
+  remote: git://github.com/chneukirchen/rack.git
+  revision: dc6b54edca2b69a5653eed98c14a8d4d71b3f45c
+  specs:
+    rack (1.2.1)
+
+GIT
+  remote: git://github.com/couchrest/couchrest.git
+  revision: 87268cc11204c7e9e558b17362f8d7e0639deaa4
+  specs:
+    couchrest (1.0.1)
+      json (~> 1.4.6)
+      mime-types (~> 1.15)
+      rest-client (~> 1.5.1)
+
+GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 701bbf2
+  revision: 0388380614dd42132a3a8d0fc7a9ded2bf455d93
   specs:
     devise (1.2.0)
       bcrypt-ruby (~> 2.1.2)
       warden (~> 0.10.7)
 
 GIT
-  remote: git://github.com/rails/rails.git
-  revision: 2a98480
+  remote: git://github.com/shenoudab/couchrest_model.git
+  revision: 70089d47221f0671cd40be33fa1f3002da576912
   specs:
-    actionmailer (3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      mail (~> 2.2.5)
-    actionpack (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      builder (~> 2.1.2)
-      erubis (~> 2.6.6)
-      i18n (~> 0.4.1)
-      rack (~> 1.2.1)
-      rack-mount (~> 0.6.9)
-      rack-test (~> 0.5.4)
+    couchrest_model (1.0.0.beta8)
+      activemodel (~> 3.0.0.rc)
+      couchrest (~> 1.0.0)
+      mime-types (~> 1.15)
+      railties (~> 3.0.0.rc)
       tzinfo (~> 0.3.22)
-    activemodel (3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      builder (~> 2.1.2)
-      i18n (~> 0.4.1)
-    activerecord (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      arel (~> 0.4.0)
-      tzinfo (~> 0.3.22)
-    activeresource (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-    activesupport (3.0.0.rc)
-    rails (3.0.0.rc)
-      actionmailer (= 3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      activerecord (= 3.0.0.rc)
-      activeresource (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      bundler (>= 1.0.0.rc.2)
-      railties (= 3.0.0.rc)
-    railties (3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      rake (>= 0.8.3)
-      thor (~> 0.14.0)
+
+GIT
+  remote: git://github.com/shenoudab/rails3-generators.git
+  revision: e8c8f70af1590af6380efadefcfe3de28614e658
+  specs:
+    rails3-generators (0.12.1)
 
 GEM
   remote: http://rubygems.org/
   specs:
     abstract (1.0.0)
-    addressable (2.2.0)
-    arel (0.4.0)
-      activesupport (>= 3.0.0.beta)
+    actionmailer (3.0.0)
+      actionpack (= 3.0.0)
+      mail (~> 2.2.5)
+    actionpack (3.0.0)
+      activemodel (= 3.0.0)
+      activesupport (= 3.0.0)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4.1)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.12)
+      rack-test (~> 0.5.4)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.0)
+      activesupport (= 3.0.0)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.0)
+      activemodel (= 3.0.0)
+      activesupport (= 3.0.0)
+      arel (~> 1.0.0)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.0)
+      activemodel (= 3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
+    addressable (2.2.1)
+    arel (1.0.1)
+      activesupport (~> 3.0.0)
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
-    couchrest (1.0.0)
-      json (= 1.2.4)
-      mime-types (>= 1.15)
-      rest-client (>= 0.5)
-    couchrest_extended_document (1.0.0)
-      activesupport (>= 2.3.0)
-      builder (>= 2.1.2)
-      couchrest (>= 1.0.0)
-      mime-types (>= 1.15)
-    couchrest_model (1.0.0.beta7)
-      activemodel (>= 3.0.0.beta4)
-      activesupport (>= 2.3.5)
-      couchrest (>= 1.0.0.beta)
-      mime-types (>= 1.15)
     erubis (2.6.6)
       abstract (>= 1.0.0)
     faraday (0.4.6)
       addressable (>= 2.1.1)
       rack (>= 1.0.1)
     i18n (0.4.1)
-    json (1.2.4)
-    mail (2.2.5)
+    json (1.4.6)
+    mail (2.2.6.1)
       activesupport (>= 2.3.6)
       mime-types
       treetop (>= 1.4.5)
@@ -89,25 +89,37 @@ GEM
       rake
     multi_json (0.0.4)
     nokogiri (1.4.3.1)
-    oauth2 (0.0.10)
+    oauth2 (0.0.13)
       faraday (~> 0.4.1)
       multi_json (>= 0.0.4)
     polyglot (0.3.1)
-    rack (1.2.1)
-    rack-mount (0.6.9)
+    rack-mount (0.6.13)
       rack (>= 1.0.0)
     rack-test (0.5.4)
       rack (>= 1.0)
+    rails (3.0.0)
+      actionmailer (= 3.0.0)
+      actionpack (= 3.0.0)
+      activerecord (= 3.0.0)
+      activeresource (= 3.0.0)
+      activesupport (= 3.0.0)
+      bundler (~> 1.0.0)
+      railties (= 3.0.0)
+    railties (3.0.0)
+      actionpack (= 3.0.0)
+      activesupport (= 3.0.0)
+      rake (>= 0.8.4)
+      thor (~> 0.14.0)
     rake (0.8.7)
-    rest-client (1.6.0)
+    rest-client (1.5.1)
       mime-types (>= 1.16)
-    thor (0.14.0)
+    thor (0.14.1)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
-    tzinfo (0.3.22)
+    tzinfo (0.3.23)
     warden (0.10.7)
       rack (>= 1.0.0)
-    webrat (0.7.0)
+    webrat (0.7.1)
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
@@ -117,12 +129,12 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
-  couchrest
-  couchrest_extended_document
-  couchrest_model
+  couchrest!
+  couchrest_model!
   devise!
   mocha
   oauth2
-  rails!
-  warden
-  webrat (= 0.7.0)
+  rack!
+  rails
+  rails3-generators!
+  webrat
