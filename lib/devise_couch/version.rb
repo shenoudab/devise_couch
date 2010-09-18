@@ -1,5 +1,3 @@
-module CouchrestModel
-  module Devise
-    VERSION = "1.0.0.beta1".freeze
-  end
+module DeviseCouch
+  VERSION = "1.0.0.beta1".freeze
 end
