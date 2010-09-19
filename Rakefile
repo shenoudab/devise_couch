@@ -3,7 +3,6 @@ require 'rake'
 require 'rake/rdoctask'
 require 'rake/gempackagetask'
 require 'rake/testtask'
-require File.join(File.dirname(__FILE__), 'lib', 'devise_couch', 'version')
 
 desc 'Default: run tests for all CouchDB ORM setups.'
 task :default => :pre_commit
@@ -45,7 +44,7 @@ spec = Gem::Specification.new do |s|
   s.summary = "CouchDB integration for Devise framework."
   s.description = "CouchDB integration for Devise framework."
   s.files =  FileList["[A-Z]*", "{app,config,lib}/**/*"]
-  s.version = CouchrestModel::Devise::VERSION.dup
+  s.version = "1.0.0.beta1"
   s.email = "sbertel@mobithought.com"
   s.homepage = "http://github.com/shenoudab/devise_couch"
   s.author = 'Shenouda Bertel'
