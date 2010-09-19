@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-gem 'rack', :git => 'git://github.com/chneukirchen/rack.git'
 
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 

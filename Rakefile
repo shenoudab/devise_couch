@@ -38,23 +38,3 @@ Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_files.include('README.rdoc')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
-
-spec = Gem::Specification.new do |s|
-  s.name = "devise_couch"
-  s.summary = "CouchDB integration for Devise framework."
-  s.description = "CouchDB integration for Devise framework."
-  s.files =  FileList["[A-Z]*", "{app,config,lib}/**/*"]
-  s.version = "1.0.0.beta1"
-  s.email = "sbertel@mobithought.com"
-  s.homepage = "http://github.com/shenoudab/devise_couch"
-  s.author = 'Shenouda Bertel'
-  s.require_path = 'lib'
-end
-
-Rake::GemPackageTask.new(spec) do |pkg|
-end
-
-desc "Install the gem #{spec.name}-#{spec.version}.gem"
-task :install do
-  system("gem install pkg/#{spec.name}-#{spec.version}.gem --no-ri --no-rdoc")
-end
