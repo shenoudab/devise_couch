@@ -1,5 +1,5 @@
 require 'devise_couch'
-require 'devise/orm/couchrest_model/compatibility'
+require 'couchrest_model/schema'
 
 module Devise
   module Orm
@@ -7,19 +7,21 @@ module Devise
       module Hook
         def devise_modules_hook!
           extend Schema
-          include Compatibility
+          create_authentication_views
           yield
           return unless Devise.apply_schema
           devise_modules.each { |m| send(m) if respond_to?(m, true) }
         end
-      end
 
-      module Schema
-        include Devise::Schema
-        # Tell how to apply schema methods.
-        def apply_devise_schema(name, type, options={})
-          return unless Devise.apply_schema
-          property name, type, options
+        private
+        def create_authentication_views
+          authentication_keys.each do |key_name|
+            view_by key_name
+          end
+          view_by :confirmation_token
+          view_by :authentication_token
+          view_by :reset_password_token
+          view_by :unlock_token
         end
       end
     end

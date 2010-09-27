@@ -5,7 +5,7 @@ gem 'rails'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 
 gem 'couchrest', :git => 'git://github.com/couchrest/couchrest.git'
-gem 'couchrest_model', :git => 'git://github.com/shenoudab/couchrest_model.git'
+gem 'couchrest_model', :git => 'git://github.com/couchrest/couchrest_model.git'
 
 gem 'oauth2'
 

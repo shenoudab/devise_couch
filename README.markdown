@@ -7,8 +7,6 @@
 Add *devise*, *devise_couch* and *couchrest_model* gems to your Gemfile (your Rails app Gemfile). The following gems are required
 
 <pre>
-  gem 'couchrest'
-  gem 'couchrest_extended_document'
   gem 'couchrest_model'
   gem 'devise'
   gem 'devise_couch'
