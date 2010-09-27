@@ -1,5 +1,5 @@
 require 'devise_couch'
-require 'couchrest_model/schema'
+require 'devise/orm/couchrest_model/schema'
 
 module Devise
   module Orm
