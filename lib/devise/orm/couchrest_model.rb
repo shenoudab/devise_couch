@@ -1,5 +1,6 @@
 require 'devise_couch'
 require 'devise/orm/couchrest_model/schema'
+require 'devise/orm/couchrest_model/date_time'
 require 'orm_adapter/adapters/couchrest_model'
 
 module Devise
